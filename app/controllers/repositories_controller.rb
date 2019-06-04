@@ -10,7 +10,7 @@ class RepositoriesController < ApplicationController
       req.params['client_secret'] =
       req.params['q'] = params[:query]
     end
-    @body = JSON.parse(@resp.body)["repository"]
+    @body = JSON.parse(@resp.body)["items"]["repositories"]
 
     # if @resp.success?
     #   @repositories = body["response"]
