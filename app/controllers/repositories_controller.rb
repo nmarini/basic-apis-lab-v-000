@@ -13,5 +13,6 @@ class RepositoriesController < ApplicationController
     @body = JSON.parse(@resp.body)
     # if @resp.success?
     #   @repositories = body["response"]
+    render 'search'
   end
 end
