@@ -11,12 +11,8 @@ class RepositoriesController < ApplicationController
       req.params['q'] = params[:query]
     end
     @body = JSON.parse(@resp.body)
+    @repositories = body["items"]
 
-    if @resp.success?
-      @repositories = body["items"]
-    else
-      @error = body["meta"]["errorDetail"]
-    end
     render 'search'
   end
 end
