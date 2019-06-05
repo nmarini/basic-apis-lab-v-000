@@ -6,6 +6,7 @@
 <% end %>
 <div>
     <ul>
+      <% if @repositories %>
     <% @repositories.each do |repository| %>
       <li>
         Name: <%= repository["name"] %><br>
@@ -14,4 +15,5 @@
       </li>
     <% end %>
     </ul>
+    <% end %>
 </div>
