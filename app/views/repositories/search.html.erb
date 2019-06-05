@@ -6,7 +6,7 @@
 <% end %>
 <div>
     <ul>
-    <% @repositories.each do |repository| %>
+    <% @repositories.each do |repository| do%>
       <li>
         Name: <%= repository["name"] %><br>
         Link: <%= repository["url"] %><br>
