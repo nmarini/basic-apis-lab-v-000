@@ -10,7 +10,7 @@
     <% @repositories.each do |repository| %>
       <li>
         Name: <%= repository["name"] %><br>
-        Link: <%= repository["url"] %><br>
+        Link: <a href="<%= repository["url"] %>"><br>
         Description: <%= repository["description"] %>
       </li>
     <% end %>
