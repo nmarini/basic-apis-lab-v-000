@@ -11,7 +11,7 @@ class RepositoriesController < ApplicationController
       req.params['q'] = params[:query]
     end
     body = JSON.parse(@resp.body)
-    @repositories = body["items"]
+    @repositories = body["items"][0]
 
     render 'search'
   end
